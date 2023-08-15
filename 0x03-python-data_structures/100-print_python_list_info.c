@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <Python.h>
 
+/**
+ * print_python_list_info - function prints info on python list
+ * @p: the python list object
+ * Return: nothing
+ */
+
 void print_python_list_info(PyObject *p)
 {
 	int size;
