@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * print_python_list_info - function prints info on python list
  * @p: the python list object
