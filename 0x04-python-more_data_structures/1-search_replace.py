@@ -2,7 +2,7 @@
 
 def search_replace(my_list, search, replace):
     if not my_list:
-        return[]
+        return []
     new_list = []
     for i in my_list:
         if i == search:
