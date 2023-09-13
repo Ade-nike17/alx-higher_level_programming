@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" adds all arguments to a Python list, and then save them to a file """
+""" Adds all arguments to a Python list, and then save them to a file
+"""
 import sys
-import json
-from os.path import exists
 
 
 if __name__ == "__main__":
