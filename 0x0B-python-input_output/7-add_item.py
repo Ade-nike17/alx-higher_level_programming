@@ -1,5 +1,13 @@
 #!/usr/bin/python3
-"""Add all arguments to a Python list, and then save them to a file"""
+"""
+This script adds command line arguments to a Python list and saves them to a file.
+
+Usage:
+        ./script_name.py arg1 arg2 ...
+
+        The script uses the 'save_to_json_file' and 'load_from_json_file' functions to save and load the list from a JSON file.
+"""
+
 import sys
 
 
