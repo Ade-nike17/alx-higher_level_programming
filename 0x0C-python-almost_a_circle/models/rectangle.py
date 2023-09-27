@@ -86,3 +86,11 @@ class Rectangle(Base):
         """Instance returns area of Rectangle"""
         rect_area = self.__width * self.__height
         return rect_area
+
+    def display(self):
+        """prints tectangle with '#' character"""
+        if self.__width == 0 or self.__height == 0:
+            print()
+        else:
+            for _ in range(self.__height):
+                print("#" * self.__width)
