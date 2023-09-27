@@ -100,17 +100,30 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
             f"{self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns arguments to attributes in the specified order"""
         num_args = len(args)
 
         if num_args >= 1:
-            self.id = args[0]
-        if num_args >= 2:
-            self.width = args[1]
-        if num_args >= 3:
-            self.height = args[2]
-        if num_args >= 4:
-            self.x = args[3]
-        if num_args >= 5:
-            self.y = args[4]
+            if num_args >= 1:
+                self.id = args[0]
+            if num_args >= 2:
+                self.width = args[1]
+            if num_args >= 3:
+                self.height = args[2]
+            if num_args >= 4:
+                self.x = args[3]
+            if num_args >= 5:
+                self.y = args[4]
+
+        else:
+            if kwargs.get('id'):
+                self.id = kwargs['id']
+            if kwargs.get('x'):
+                self.height = kwargs['x']
+            if kwargs.get('y'):
+                self.weight = kwargs['y']
+            if kwargs.get('width'):
+                self.y = kwargs['width']
+            if kwargs.get('height'):
+                self.x = kwargs['height']
