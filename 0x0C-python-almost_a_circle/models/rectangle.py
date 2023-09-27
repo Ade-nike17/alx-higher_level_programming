@@ -88,12 +88,12 @@ class Rectangle(Base):
         return rect_area
 
     def display(self):
-        """prints tectangle with '#' character"""
-        if self.__width == 0 or self.__height == 0:
+        """prints rectangle with '#' character"""
+        for _ in range(self.y):
             print()
-        else:
-            for _ in range(self.__height):
-                print("#" * self.__width)
+
+        for _ in range(self.__height):
+            print(" " * self.x + "#" * self.__width)
 
     def __str__(self):
         """returns a string representation of the 'Rectangle'"""
