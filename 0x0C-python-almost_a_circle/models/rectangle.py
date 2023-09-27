@@ -104,7 +104,7 @@ class Rectangle(Base):
         """assigns arguments to attributes in the specified order"""
         num_args = len(args)
 
-        if num_args >= 1:
+        if (num_args >= 1):
             if num_args >= 1:
                 self.id = args[0]
             if num_args >= 2:
@@ -120,10 +120,10 @@ class Rectangle(Base):
             if kwargs.get('id'):
                 self.id = kwargs['id']
             if kwargs.get('x'):
-                self.height = kwargs['x']
+                self.x = kwargs['x']
             if kwargs.get('y'):
-                self.weight = kwargs['y']
+                self.y = kwargs['y']
             if kwargs.get('width'):
-                self.y = kwargs['width']
+                self.width = kwargs['width']
             if kwargs.get('height'):
-                self.x = kwargs['height']
+                self.height = kwargs['height']
