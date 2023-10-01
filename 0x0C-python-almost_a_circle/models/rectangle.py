@@ -127,3 +127,13 @@ class Rectangle(Base):
                 self.width = kwargs['width']
             if kwargs.get('height'):
                 self.height = kwargs['height']
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of 'Rectangle'"""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y,
+        }
