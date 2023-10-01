@@ -18,10 +18,9 @@ class Square(Rectangle):
             y: y coordinate. Defaults to 0.
             id: id of the square. Defaults to None.
         """
-        
+
         super().__init__(size, size, x, y, id)
 
-        
     def __str__(self):
         """Returns a string representation of the 'Square'"""
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
