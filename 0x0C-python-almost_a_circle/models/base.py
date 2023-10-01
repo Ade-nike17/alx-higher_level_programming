@@ -7,6 +7,7 @@ This class will be the “base” of all other classes in this project
 
 import json
 
+
 class Base:
     """This class represents the Base"""
     __nb_objects = 0
@@ -28,4 +29,3 @@ class Base:
         elif not isinstance(list_dictionaries, list):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
-
