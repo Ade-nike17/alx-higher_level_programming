@@ -3,7 +3,7 @@
 The `rectangle` module.
 This module defines a Rectangle class
 """
-from .rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -19,50 +19,9 @@ class Square(Rectangle):
             id: id of the square. Defaults to None.
         """
         
-        super().__init__(height=size, width=size, x=x, y=y, id=id)
+        super().__init__(size, size, x, y, id)
 
         
-        def __str__(self):
-            """Returns a string representation of the 'Square'"""
-            return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
-
-        @property
-        def size(self):
-            """getter method for square"""
-            return self.height
-
-        @size.setter
-        def size(self, s):
-            """setter method for size"""
-            self.width = value
-            self.height = value
-
-        
-        def update(self, *args, **kwargs):
-            """assigns arguments to attributes in the specified order"""
-            num_args = len(args)
-            if (num_args >= 1):
-                if num_args >= 1:
-                    self.id = args[0]
-                if num_args >= 2:
-                    self.size = args[1]
-                if num_args >= 3:
-                    self.x = args[2]
-                if num_args >= 4:
-                    self.y = args[3]
-
-                else:
-                    if kwargs.get('size'):   
-                        self.size = kwargs['size']
-                    super().update(*args, **kwargs)
-
-        
-        def to_dictionary(self):
-            
-            """converts the square to a dictionary"""
-            return {
-                'id': self.id,
-                'x': self.x,
-                'y': self.y,
-                'size': self.width,
-            }
+    def __str__(self):
+        """Returns a string representation of the 'Square'"""
+        return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
