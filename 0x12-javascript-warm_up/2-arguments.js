@@ -7,5 +7,5 @@ if (process.argv[3]) {
 } else if (process.argv[2]) {
   console.log('Argument found');
 } else {
-  console.log('No argument found');
+  console.log('No argument');
 }
