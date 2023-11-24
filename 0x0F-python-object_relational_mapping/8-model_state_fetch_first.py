@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query to fetch all State objects and sort them by id
+    # Query to fetch first State object
     state = session.query(State).order_by(State.id).first()
     if state:
         print("{}: {}".format(state.id, state.name))
