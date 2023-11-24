@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # Query to change name of State object
     swap_state = session.query(State).filter(State.id == '2').first()
-    swap_state.name = 'Mexico'
+    swap_state.name = 'New Mexico'
     session.commit()
 
     session.close()
