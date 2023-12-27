@@ -14,7 +14,7 @@ def send_request_and_display_body(url):
         # Send a request to the url
         with urllib.request.urlopen(url) as response:
             # Read and decode the response body
-            response_body = response.read().decode('utf-8')
+            response_body = response.read().decode('ascii')
 
             # Display the body of the response
             print(response_body)
