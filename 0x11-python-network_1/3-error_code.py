@@ -24,5 +24,8 @@ def send_request_and_display_body(url):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        sys.exit(1)
+
     url = sys.argv[1]
     send_request_and_display_body(url)
