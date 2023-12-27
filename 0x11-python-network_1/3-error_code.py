@@ -20,7 +20,7 @@ def send_request_and_display_body(url):
             print(response_body)
 
     except urllib.error.HTTPError as e:
-        print(f"Errror code: {e.code}")
+        print(f"Error code: {e.code}")
 
 
 if __name__ == "__main__":
